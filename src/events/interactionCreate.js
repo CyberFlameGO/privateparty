@@ -8,6 +8,7 @@ client.on('interactionCreate', async interaction => {
     if (interaction.type == 4 && command.autocomplete) {
         const choices = [];
         await command.autocomplete(interaction, choices);
+        return;
     }
 
     if (!interaction.type == 2) return;
